@@ -1,0 +1,155 @@
+
+
+.about-container {
+    margin: 0;
+    padding: 100px 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-heading {
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+    color: #26428B;
+    /* font-weight: 700; */
+    font-size: 2.2em;
+    /* line-height: 1.2; */
+    width: 100%;
+    text-align: center;
+}
+
+.about-heading p {
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    transition: all .10s;
+}
+
+.about-child-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 100px;
+}
+
+.about-img {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+    height: 100%;
+    width: 550px;
+}
+
+.about-gem-rating-img {
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+    height: 300px;
+    width: 600px;
+}
+
+.about-description {
+    font-size: 1.2em;
+    letter-spacing: .5px;
+    text-align: left;
+}
+
+@media only screen and (max-width:1300px) {
+
+    .about-child-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+}
+
+@media only screen and (max-width:900px) {
+
+    .about-container {
+        padding: 100px 140px;
+    }
+
+    .about-img {
+        height: 450px;
+        width: 670px;
+    }
+
+    .about-gem-rating-img {
+        height: 250px;
+        width: 500px;
+    }
+
+}
+
+
+@media only screen and (max-width:700px) {
+
+    .about-container {
+        padding: 100px 50px;
+    }
+
+    .about-container div {
+        font-size: 1.6em;
+    }
+
+    .about-container p {
+        font-size: 1em;
+    }
+
+    .about-heading {
+        font-size: 1.6em !important;
+    }
+
+    .about-img {
+        height: 300px;
+        width: 420px;
+    }
+
+    .about-gem-rating-img {
+        height: 200px;
+        width: 400px;
+    }
+
+}
+
+
+@media only screen and (max-width:450px) {
+
+    .about-container {
+        padding: 100px 28px;
+    }
+
+    .about-container div {
+        font-size: 1.4em;
+    }
+
+    .about-container p {
+        font-size: .9em;
+    }
+
+    .about-heading {
+        font-size: 1.4em !important;
+    }
+
+    .about-img {
+        height: 200px;
+        width: 300px;
+    }
+
+    .about-gem-rating-img {
+        height: 150px;
+        width: 300px;
+    }
+
+}
+
+

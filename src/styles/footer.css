@@ -1,0 +1,115 @@
+
+
+.footer-container {
+    padding: 80px 200px;
+}
+
+.footer-first-child-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+.footer-first-child-logo-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-first-child-logo-container span {
+    /* color: #E00C05; */
+    color: white;
+    font-size: 1.7em;
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.footer-first-child-description-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 4px;
+    text-align: right;
+    font-size: 1em;
+}
+
+.footer-second-child-container {
+    margin: 40px 0;
+    padding: 40px 100px;
+    border-top: 2px solid white;
+    font-size: 1em;
+}
+
+@media only screen and (max-width:1200px) {
+
+    .footer-first-child-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .footer-first-child-description-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 4px;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width:900px) {
+
+    .footer-container {
+        padding: 40px 100px;
+    }
+
+    .footer-first-child-logo-container span {
+        font-size: 1.4em;
+    }
+
+    .footer-second-child-container {
+        margin: 20px 0;
+        padding: 20px 0;
+    }
+
+}
+
+@media only screen and (max-width:450px) {
+
+    .footer-container {
+        padding: 40px 40px;
+    }
+
+    .footer-first-child-container {
+        gap: 20px;
+        font-size: .9em;
+    }
+
+    .footer-first-child-logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footer-second-child-container {
+        font-size: .9em;
+    }
+
+}
