@@ -277,7 +277,7 @@ const About = () => {
                         </p>
                         <p className={`${inter.className} about-description`}>
                             Our self-reliance and flexible approach have been instrumental in our success over the years. 
-                            Every aspect of our company's functioning is geared toward total customer satisfaction.
+                            Every aspect of our company&apos;s functioning is geared toward total customer satisfaction.
                         </p>
                     </motion.div>
                 </div>

@@ -71,7 +71,7 @@ const Contact = () => {
                 </motion.div>
 
                 <p className={`${inter.className} contact-subtitle`}>
-                    We're here to help. Reach out to us for any inquiries.
+                    We&apos;re here to help. Reach out to us for any inquiries.
                 </p>
 
                 <div className="contact-child-container">
