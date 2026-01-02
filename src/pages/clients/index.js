@@ -1,34 +1,27 @@
-import { Tilt_Neon, Varela_Round } from "next/font/google";
-import Footer from "../Footer";
-import Navbar from "../Navbar";
+import { Inter } from "next/font/google";
+import Navbar from "@/components/common/Navbar";
+import Footer from "@/components/common/Footer";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-import c1 from "/public/clients/Picture 1.jpg";
-import c2 from "/public/clients/Picture 2.png";
-import c3 from "/public/clients/Picture 3.png";
-import c4 from "/public/clients/Picture 4.jpg";
-import c5 from "/public/clients/Picture 5.jpg";
-import c6 from "/public/clients/Picture 6.jpg";
-import c7 from "/public/clients/Picture 7.png";
-import c8 from "/public/clients/Picture 8.png";
-import c9 from "/public/clients/Picture 9.jpg";
-import c10 from "/public/clients/Picture 10.png";
-import c11 from "/public/clients/Picture 11.jpg";
-import c12 from "/public/clients/Picture 12.png";
-import c13 from "/public/clients/Picture 13.png";
-import c14 from "/public/clients/Picture 14.jpg";
-import c15 from "/public/clients/Picture 15.jpg";
+import c1 from "../../../public/clients/Picture 1.jpg";
+import c2 from "../../../public/clients/Picture 2.png";
+import c3 from "../../../public/clients/Picture 3.png";
+import c4 from "../../../public/clients/Picture 4.jpg";
+import c5 from "../../../public/clients/Picture 5.jpg";
+import c6 from "../../../public/clients/Picture 6.jpg";
+import c7 from "../../../public/clients/Picture 7.png";
+import c8 from "../../../public/clients/Picture 8.png";
+import c9 from "../../../public/clients/Picture 9.jpg";
+import c10 from "../../../public/clients/Picture 10.png";
+import c11 from "../../../public/clients/Picture 11.jpg";
+import c12 from "../../../public/clients/Picture 12.png";
+import c13 from "../../../public/clients/Picture 13.png";
+import c14 from "../../../public/clients/Picture 14.jpg";
+import c15 from "../../../public/clients/Picture 15.jpg";
 import Head from "next/head";
 
-
-const tiltNeon = Tilt_Neon({
-    weight: '400',
-    subsets: [],
-});
-
-const varelaRound = Varela_Round({
-    weight: '400',
+const inter = Inter({
     subsets: ['latin'],
 });
 
@@ -79,7 +72,7 @@ const Clients = () => {
             <Navbar />
             <div className="clients-container">
                 <motion.div
-                    className={`${varelaRound.className} clients-heading`}
+                    className={`${inter.className} clients-heading`}
                     variants={divVariants}
                     initial="hidden"
                     whileInView="visible"

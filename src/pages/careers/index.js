@@ -1,6 +1,6 @@
-import Navbar from "../Navbar";
-import Footer from "../Footer";
-import { Tilt_Neon, Varela_Round } from "next/font/google";
+import Navbar from "@/components/common/Navbar";
+import Footer from "@/components/common/Footer";
+import { Inter } from "next/font/google";
 import { motion } from "framer-motion";
 import { Group, NativeSelect, Text, TextInput, Button, LoadingOverlay } from "@mantine/core";
 import { BiChevronDown } from "react-icons/bi";
@@ -10,16 +10,8 @@ import { Radio } from '@mantine/core';
 import { Dropzone, MIME_TYPES } from "@mantine/dropzone";
 import { useForm } from '@mantine/form';
 import Head from "next/head";
-// import { useDisclosure } from '@mantine/hooks';
 
-
-// const tiltNeon = Tilt_Neon({
-//     weight: '400',
-//     subsets: [],
-// });
-
-const varelaRound = Varela_Round({
-    weight: '400',
+const inter = Inter({
     subsets: ['latin'],
 });
 
@@ -455,7 +447,7 @@ const Careers = () => {
             <div className="careers-container">
                 <LoadingOverlay visible={yes} overlayBlur={2} />
                 <motion.div
-                    className={`${varelaRound.className} careers-heading`}
+                    className={`${inter.className} careers-heading`}
                     variants={divVariants}
                     initial="hidden"
                     whileInView="visible"
