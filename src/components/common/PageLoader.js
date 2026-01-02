@@ -34,20 +34,20 @@ const useStyles = createStyles((theme) => ({
         alignItems: 'center',
         justifyContent: 'center',
         zIndex: 9999,
-        animation: `${fadeIn} 0.3s ease-in`,
+        opacity: 1,
         '&.fade-out': {
             animation: `${fadeOut} 0.5s ease-out forwards`,
         },
     },
     logoWrapper: {
         position: 'relative',
-        width: 200,
-        height: 80,
+        width: 150,
+        height: 60,
         marginBottom: 40,
         animation: `${pulse} 2s ease-in-out infinite`,
         [theme.fn.smallerThan('sm')]: {
-            width: 160,
-            height: 64,
+            width: 120,
+            height: 48,
         },
     },
     spinnerWrapper: {
@@ -69,7 +69,7 @@ const PageLoader = ({ loading = true }) => {
     if (!loading) return null;
 
     return (
-        <Box className={cx(classes.loaderContainer, { 'fade-out': !loading })}>
+        <Box className={cx(classes.loaderContainer, { 'fade-out': !loading })} style={{ opacity: 1 }}>
             <svg width="0" height="0">
                 <defs>
                     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -86,6 +86,7 @@ const PageLoader = ({ loading = true }) => {
                     fill
                     style={{ objectFit: 'contain' }}
                     priority
+                    unoptimized
                 />
             </Box>
             
