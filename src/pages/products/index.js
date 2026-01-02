@@ -1,62 +1,60 @@
-import { Tilt_Neon, Varela_Round } from "next/font/google";
-import Footer from "../Footer";
-import Navbar from "../Navbar";
+import { Inter } from "next/font/google";
+import Navbar from "@/components/common/Navbar";
+import Footer from "@/components/common/Footer";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-import p1 from "/public/products/accessories.png";
-import p2 from "/public/products/desktop.jpg";
-import p3 from "/public/products/laptop.webp";
-import p4 from "/public/products/Networking products.jpeg";
-import p5 from "/public/products/printer.webp";
-import p6 from "/public/products/scanner.webp";
-import p7 from "/public/products/server.jpeg";
-import p8 from "/public/products/softwares.png";
-import p9 from "/public/products/ups.webp";
+import computersLaptops from "../../../public/products/computers_laptops.png";
+import accessories from "../../../public/products/computer_accessories.png";
+import networking from "../../../public/products/networking_products.png";
+import printerscanners from "../../../public/products/printers_scanners.png";
+import servers from "../../../public/products/servers.png";
+import software from "../../../public/products/software_solutions.png";
+import ups from "../../../public/products/ups_systems.png";
 import Head from "next/head";
 
-
-const tiltNeon = Tilt_Neon({
-    weight: '400',
-    subsets: [],
-});
-
-const varelaRound = Varela_Round({
-    weight: '400',
+const inter = Inter({
     subsets: ['latin'],
 });
 
-const divVariants = {
-    hidden: {
-        transition: {
-            staggerChildren: .2, // delay between animating children
-            staggerDirection: -1, // animating children in reverse order
-        },
-    },
-    visible: {
-        transition: {
-            staggerChildren: .2,
-            staggerDirection: 1, // animating children in normal order,
-            type: "spring"
-        },
-    },
-};
-
-const childVariants = {
-    hidden: {
-        opacity: 0,
-        y: 50,
-    },
-    visible: {
-        opacity: 1,
+const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+        opacity: 1, 
         y: 0,
-        transition: {
-            duration: .22, // duration of the animation
-            ease: "easeOut", // easing function
-        },
+        transition: { duration: 0.6, ease: "easeOut" }
     }
 };
 
+const products = [
+    { id: 1, name: "Computers & Laptops", category: "Computing", image: computersLaptops },
+    { id: 2, name: "Computer Accessories", category: "Accessories", image: accessories },
+    { id: 3, name: "Networking Products", category: "Networking", image: networking },
+    { id: 4, name: "Printers & Scanners", category: "Printing & Imaging", image: printerscanners },
+    { id: 5, name: "Servers", category: "Computing", image: servers },
+    { id: 6, name: "Software Solutions", category: "Software", image: software },
+    { id: 7, name: "UPS Systems", category: "Power Solutions", image: ups }
+];
+
+const ProductCard = ({ product, index }) => {
+    return (
+        <motion.div
+            className="product-card"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1, duration: 0.5 }}
+        >
+            <div className="product-image-wrapper">
+                <Image src={product.image} alt={product.name} className="product-image" />
+            </div>
+            <div className="product-info">
+                <span className="product-category">{product.category}</span>
+                <h3 className={`${inter.className} product-name`}>{product.name}</h3>
+            </div>
+        </motion.div>
+    );
+};
 
 const Products = () => {
     return (
@@ -66,59 +64,32 @@ const Products = () => {
                 <meta name="description" content="sp solutions point" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.png" />
-
             </Head>
             <Navbar />
             <div className="products-container">
+                {/* Hero Section */}
                 <motion.div
-                    className={`${varelaRound.className} products-heading`}
-                    variants={divVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: false }}
+                    className="products-hero"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
                 >
-
-                    <motion.p variants={childVariants} style={{ margin: 0, marginRight: 10, padding: 0 }} >Our</motion.p>
-                    <motion.p variants={childVariants} style={{ margin: 0, marginRight: 10, padding: 0, color: "#E00C05" }} >Valuable</motion.p>
-                    <motion.p variants={childVariants} style={{ margin: 0, padding: 0 }} >products</motion.p>
+                    <h1 className={`${inter.className} products-heading`}>
+                        Our <span className="highlight">Products</span>
+                    </h1>
+                    <p className={`${inter.className} products-description`}>
+                        We offer a comprehensive range of IT products from industry-leading brands including HP, Epson, Samsung, Exide, Intel, Dell, Apple, Microsoft, Quick Heal, WD, Lenovo, Acer, Microtek, Brother, Cise, Adobe, D-Link, Gigabyte, and Zebronics. As authorized associates of HP, Acer, Epson, Brother, Microtek, Uniline, Zebronics, and Exide on GeM, we ensure quality and reliability.
+                    </p>
                 </motion.div>
 
-                <motion.p
-                    className={`${tiltNeon.className} products-description`}
-                    initial={{ y: 80, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 2, type: "spring" }}
-                    // viewport={{ once: false }}
-                    style={{ margin: 0, textAlign: 'center', width: "100%" }}
-                >
-                    We sell a wide variety of IT products from leading brands like HP, Epson, Samsung, Exide, Intel, Dell, Apple, Microsoft, Quick Heal, WD, Lenovo, Acer, Microtek, Brother, Cise, Adobe, D-Link, Gigabyte, Zebronics and many more. We are associates of popular brands like HP, Acer, Epson, Brother, Microtek, Epson, Uniline, Zebronics and Exide on GeM.
-                </motion.p>
-
-                <div className="products-child-container">
-
-                    <Image src={p1} alt='' className="products-child-img" />
-
-                    <Image src={p2} alt='' className="products-child-img" />
-
-                    <Image src={p3} alt='' className="products-child-img" />
-
-                    <Image src={p4} alt='' className="products-child-img" />
-
-                    <Image src={p5} alt='' className="products-child-img" />
-
-                    <Image src={p6} alt='' className="products-child-img" />
-
-                    <Image src={p7} alt='' className="products-child-img" />
-
-                    <Image src={p8} alt='' className="products-child-img" />
-
-                    <Image src={p9} alt='' className="products-child-img" />
-
+                {/* Products Grid */}
+                <div className="products-grid">
+                    {products.map((product, index) => (
+                        <ProductCard key={product.id} product={product} index={index} />
+                    ))}
                 </div>
             </div>
             <Footer />
-
         </>
     )
 }
