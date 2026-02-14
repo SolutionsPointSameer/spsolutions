@@ -17,10 +17,6 @@ import software from "../../../public/products/software_solutions.png";
 import ups from "../../../public/products/ups_systems.png";
 import Head from "next/head";
 
-const inter = Inter({
-    subsets: ['latin'],
-});
-
 const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: { 
