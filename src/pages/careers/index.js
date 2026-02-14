@@ -1,6 +1,6 @@
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
-import { Inter } from "next/font/google";
+
 import { motion } from "framer-motion";
 import { Group, NativeSelect, Text, TextInput, Button, LoadingOverlay } from "@mantine/core";
 import { BiChevronDown } from "react-icons/bi";
@@ -11,9 +11,7 @@ import { Dropzone, MIME_TYPES } from "@mantine/dropzone";
 import { useForm } from '@mantine/form';
 import Head from "next/head";
 
-const inter = Inter({
-    subsets: ['latin'],
-});
+
 
 const divVariants = {
     hidden: {
@@ -447,7 +445,7 @@ const Careers = () => {
             <div className="careers-container">
                 <LoadingOverlay visible={yes} overlayBlur={2} />
                 <motion.div
-                    className={`${inter.className} careers-heading`}
+                    className="careers-heading"
                     variants={divVariants}
                     initial="hidden"
                     whileInView="visible"

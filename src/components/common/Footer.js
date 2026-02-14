@@ -1,19 +1,17 @@
+import Link from "next/link";
+import { Box, Container, Grid, Text, Stack, Group, createStyles, ActionIcon } from '@mantine/core';
+import {
+    IconPhone,
+    IconMail,
+    IconMapPin,
+    IconBrandFacebook,
+    IconBrandTwitter,
+    IconBrandLinkedin,
+    IconBrandInstagram
+} from '@tabler/icons-react';
 import Image from "next/image";
 import LOGO from "../../../public/LOGO-FOOTER.png";
-import { Inter } from "next/font/google";
-import { Box, Container, Grid, Text, Stack, Group, createStyles, ActionIcon } from '@mantine/core';
-import Link from "next/link";
-import { 
-    IconPhone, 
-    IconMail, 
-    IconMapPin, 
-    IconBrandFacebook, 
-    IconBrandTwitter, 
-    IconBrandLinkedin, 
-    IconBrandInstagram 
-} from '@tabler/icons-react';
 
-const inter = Inter({ subsets: ['latin'] });
 
 const useStyles = createStyles((theme) => ({
     footer: {
@@ -62,7 +60,7 @@ const useStyles = createStyles((theme) => ({
         padding: '6px 0',
         textDecoration: 'none',
         transition: 'all 0.3s ease',
-        fontFamily: inter.style.fontFamily,
+        transition: 'all 0.3s ease',
 
         '&:hover': {
             color: '#E00C05',
@@ -110,7 +108,7 @@ const useStyles = createStyles((theme) => ({
         color: 'rgba(255, 255, 255, 0.4)',
         fontSize: theme.fontSizes.sm,
         textAlign: 'center',
-        fontFamily: inter.style.fontFamily,
+        textAlign: 'center',
     }
 }));
 
@@ -132,7 +130,7 @@ const Footer = () => {
                     <Grid.Col md={6} sm={12}>
                         <div className={classes.logoSection}>
                             <Image src={LOGO} alt="SP Solutions Point" height={60} width={60} style={{ marginBottom: 20 }} />
-                            <Text className={inter.className} size="xl" weight={700} color="white" mb={15} sx={{ fontSize: '1.5rem' }}>
+                            <Text size="xl" weight={700} color="white" mb={15} sx={{ fontSize: '1.5rem' }}>
                                 S P Solutions Point Pvt. Ltd.
                             </Text>
                             <Text size="sm" mb={25} sx={{ color: 'rgba(255, 255, 255, 0.6)', maxWidth: 350, lineHeight: 1.7 }}>
@@ -158,7 +156,7 @@ const Footer = () => {
                     {/* Contact Section */}
                     <Grid.Col md={6} sm={12} sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
                         <Stack spacing="lg" align="flex-start">
-                             <Text className={`${inter.className} ${classes.title}`} mb={0}>Contact info</Text>
+                             <Text className={classes.title} mb={0}>Contact info</Text>
                             <div className={classes.contactItem}>
                                 <IconPhone size={24} stroke={1.5} color="#E00C05" />
                                 <Box>

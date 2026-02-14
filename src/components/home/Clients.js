@@ -1,12 +1,7 @@
 import Slider from "react-slick";
 import Image from 'next/image';
 import { Container, Title, Box, useMantineTheme } from '@mantine/core';
-import { Inter } from 'next/font/google';
 import { motion } from 'framer-motion';
-
-const inter = Inter({
-    subsets: ['latin'],
-});
 
 
 const Clients = () => {
@@ -69,7 +64,7 @@ const Clients = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
-                    <Title order={2} align="center" mb={50} className={inter.className}>
+                    <Title order={2} align="center" mb={50}>
                         Our Valuable <span style={{ color: theme.colors.brand[6] }}>Clients</span>
                     </Title>
                 </motion.div>

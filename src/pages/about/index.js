@@ -1,6 +1,6 @@
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
-import { Inter } from "next/font/google";
+
 import { motion } from "framer-motion";
 import img from "../../../public/about.png";
 import gemRatingImg from "../../../public/GeM Rating.jpeg";
@@ -8,9 +8,7 @@ import Image from "next/image";
 import Head from "next/head";
 import { FaAward, FaUsers, FaHandshake, FaLightbulb, FaShieldAlt, FaRocket } from "react-icons/fa";
 
-const inter = Inter({
-    subsets: ['latin'],
-});
+
 
 const divVariants = {
     hidden: {
@@ -235,7 +233,7 @@ const About = () => {
             <div className="about-container">
                 {/* Hero Section */}
                 <motion.div
-                    className={`${inter.className} about-heading`}
+                    className="about-heading"
                     variants={divVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -265,17 +263,17 @@ const About = () => {
                         whileInView="visible"
                         viewport={{ once: true }}
                     >
-                        <h2 className={`${inter.className} about-section-title`}>Empowering Businesses Through Technology</h2>
-                        <p className={`${inter.className} about-description`}>
+                        <h2 className="about-section-title">Empowering Businesses Through Technology</h2>
+                        <p className="about-description">
                             SP Solutions Point Pvt Ltd is a leading provider of comprehensive IT solutions and infrastructure services. 
                             We coordinate with government and corporate clients to assist them with their technology and outsourcing requirements.
                         </p>
-                        <p className={`${inter.className} about-description`}>
+                        <p className="about-description">
                             Backed by an excellent team of dedicated, qualified technical professionals under the leadership of 
                             Mr. Sudhir Ranjan, who brings extensive expertise in the IT field, we fulfill all your computing needs 
                             with precision and excellence.
                         </p>
-                        <p className={`${inter.className} about-description`}>
+                        <p className="about-description">
                             Our self-reliance and flexible approach have been instrumental in our success over the years. 
                             Every aspect of our company&apos;s functioning is geared toward total customer satisfaction.
                         </p>
@@ -292,8 +290,8 @@ const About = () => {
                 >
                     {stats.map((stat, index) => (
                         <div key={index} className="about-stat-card">
-                            <h3 className={`${inter.className} about-stat-number`}>{stat.number}</h3>
-                            <p className={`${inter.className} about-stat-label`}>{stat.label}</p>
+                            <h3 className="about-stat-number">{stat.number}</h3>
+                            <p className="about-stat-label">{stat.label}</p>
                         </div>
                     ))}
                 </motion.div>
@@ -307,8 +305,8 @@ const About = () => {
                         whileInView="visible"
                         viewport={{ once: true }}
                     >
-                        <h2 className={`${inter.className} about-section-title`}>Our Mission</h2>
-                        <p className={`${inter.className} about-description`}>
+                        <h2 className="about-section-title">Our Mission</h2>
+                        <p className="about-description">
                             To deliver innovative, reliable, and cost-effective IT solutions that empower businesses 
                             to achieve their goals while maintaining the highest standards of quality and customer service.
                         </p>
@@ -322,8 +320,8 @@ const About = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
                     >
-                        <h2 className={`${inter.className} about-section-title`}>Our Vision</h2>
-                        <p className={`${inter.className} about-description`}>
+                        <h2 className="about-section-title">Our Vision</h2>
+                        <p className="about-description">
                             To be the most trusted technology partner for government and corporate organizations, 
                             recognized for excellence, innovation, and unwavering commitment to client success.
                         </p>
@@ -332,7 +330,7 @@ const About = () => {
 
                 {/* Core Values Section */}
                 <motion.h2 
-                    className={`${inter.className} about-values-heading`}
+                    className="about-values-heading"
                     variants={fadeInUp}
                     initial="hidden"
                     whileInView="visible"
@@ -352,8 +350,8 @@ const About = () => {
                             transition={{ delay: index * 0.1, duration: 0.5 }}
                         >
                             <value.icon className="about-value-icon" />
-                            <h3 className={`${inter.className} about-value-title`}>{value.title}</h3>
-                            <p className={`${inter.className} about-value-description`}>{value.description}</p>
+                            <h3 className="about-value-title">{value.title}</h3>
+                            <p className="about-value-description">{value.description}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -367,7 +365,7 @@ const About = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
-                    <h2 className={`${inter.className} about-section-title`}>Our GeM Performance</h2>
+                    <h2 className="about-section-title">Our GeM Performance</h2>
                     <PieChart data={gemRatings} title="Rating" isPercentage={false} />
                 </motion.div>
 
