@@ -1,4 +1,8 @@
-import { Inter } from "next/font/google";
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  preload: false
+})
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import { motion } from "framer-motion";
