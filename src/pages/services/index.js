@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import { motion } from "framer-motion";
@@ -11,9 +11,7 @@ import { AiFillFolderOpen } from "react-icons/ai";
 import { HiLightBulb } from "react-icons/hi";
 import Head from "next/head";
 
-const inter = Inter({
-    subsets: ['latin'],
-});
+
 
 const divVariants = {
     hidden: {
@@ -109,7 +107,7 @@ const Services = () => {
             <Navbar />
             <div className="services-container">
                 <motion.div
-                    className={`${inter.className} services-heading`}
+                    className="services-heading"
                     variants={divVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -125,8 +123,8 @@ const Services = () => {
                     {services_data.map((data, index) => (
                         <div key={index} className="services-grand-child-container">
                             {<data.icon style={{ height: 80, width: 80 }} className="services-grand-child-icon" />}
-                            <span className={`${inter.className} services-grand-child-title`}>{data.title}</span>
-                            <p className={`${inter.className} services-grand-child-description`}>{data.description}</p>
+                            <span className="services-grand-child-title">{data.title}</span>
+                            <p className="services-grand-child-description">{data.description}</p>
                         </div>
                     )
                     )}

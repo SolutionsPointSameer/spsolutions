@@ -1,16 +1,10 @@
 import Link from "next/link";
 import { useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
-import { Inter } from "next/font/google";
 import Image from "next/image";
 import { Header, Container, Group, Burger, Paper, Text, Button, Box, useMantineTheme } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import LOGO from "../../../public/LOGO.png";
-
-const inter = Inter({
-    weight: '600',
-    subsets: ['latin'],
-});
 
 const HEADER_HEIGHT = 80;
 
@@ -61,8 +55,7 @@ const Navbar = () => {
             <Container size="xl" h="100%" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 10 }}>
                     <Image src={LOGO} alt="SP Solutions Point" height={46} width={46} />
-                    <Text 
-                        className={inter.className}
+                    <Text
                         size="lg" 
                         weight={700}
                         color="dark"

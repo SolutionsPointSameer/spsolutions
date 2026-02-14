@@ -1,15 +1,13 @@
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
-import { Inter } from "next/font/google";
+
 import { motion } from "framer-motion";
 import { MdLocationPin } from "react-icons/md";
 import { MdEmail } from "react-icons/md";
 import { BsTelephoneFill } from "react-icons/bs";
 import Head from "next/head";
 
-const inter = Inter({
-    subsets: ['latin'],
-});
+
 
 const divVariants = {
     hidden: {
@@ -58,7 +56,7 @@ const Contact = () => {
 
             <div className="contact-container">
                 <motion.div
-                    className={`${inter.className} contact-heading`}
+                    className="contact-heading"
                     variants={divVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -70,7 +68,7 @@ const Contact = () => {
                     <motion.p variants={childVariants} style={{ margin: 0, padding: 0 }} >Touch</motion.p>
                 </motion.div>
 
-                <p className={`${inter.className} contact-subtitle`}>
+                <p className="contact-subtitle">
                     We&apos;re here to help. Reach out to us for any inquiries.
                 </p>
 
@@ -80,7 +78,7 @@ const Contact = () => {
                     </div>
                     <div className="contact-grand-child-container">
                         <motion.div 
-                            className={`${inter.className} contact-info-card`}
+                            className="contact-info-card"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.4, delay: 0.1 }}
@@ -90,7 +88,7 @@ const Contact = () => {
                             <span>+91 8130494920 - 31, +91 9811281443</span>
                         </motion.div>
                         <motion.div 
-                            className={`${inter.className} contact-info-card`}
+                            className="contact-info-card"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.4, delay: 0.2 }}
@@ -100,7 +98,7 @@ const Contact = () => {
                             <span>info@solutionspoint.net</span>
                         </motion.div>
                         <motion.div 
-                            className={`${inter.className} contact-info-card`}
+                            className="contact-info-card"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.4, delay: 0.3 }}

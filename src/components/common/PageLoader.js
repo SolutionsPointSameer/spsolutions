@@ -1,10 +1,6 @@
 import { Box, Loader, createStyles, keyframes } from '@mantine/core';
 import Image from 'next/image';
-import { Inter } from 'next/font/google';
 
-const inter = Inter({
-    subsets: ['latin'],
-});
 
 const pulse = keyframes({
     '0%, 100%': { opacity: 1, transform: 'scale(1)' },

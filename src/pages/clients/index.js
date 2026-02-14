@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import { motion } from "framer-motion";
@@ -21,9 +21,7 @@ import c14 from "../../../public/clients/Picture 14.jpg";
 import c15 from "../../../public/clients/Picture 15.jpg";
 import Head from "next/head";
 
-const inter = Inter({
-    subsets: ['latin'],
-});
+
 
 const divVariants = {
     hidden: {
@@ -72,7 +70,7 @@ const Clients = () => {
             <Navbar />
             <div className="clients-container">
                 <motion.div
-                    className={`${inter.className} clients-heading`}
+                    className="clients-heading"
                     variants={divVariants}
                     initial="hidden"
                     whileInView="visible"

@@ -1,8 +1,4 @@
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  preload: false
-})
+
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import { motion } from "framer-motion";
@@ -16,6 +12,8 @@ import servers from "../../../public/products/servers.png";
 import software from "../../../public/products/software_solutions.png";
 import ups from "../../../public/products/ups_systems.png";
 import Head from "next/head";
+
+
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -50,7 +48,7 @@ const ProductCard = ({ product, index }) => {
             </div>
             <div className="product-info">
                 <span className="product-category">{product.category}</span>
-                <h3 className={`${inter.className} product-name`}>{product.name}</h3>
+                <h3 className="product-name">{product.name}</h3>
             </div>
         </motion.div>
     );
@@ -74,10 +72,10 @@ const Products = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h1 className={`${inter.className} products-heading`}>
+                    <h1 className="products-heading">
                         Our <span className="highlight">Products</span>
                     </h1>
-                    <p className={`${inter.className} products-description`}>
+                    <p className="products-description">
                         We offer a comprehensive range of IT products from industry-leading brands including HP, Epson, Samsung, Exide, Intel, Dell, Apple, Microsoft, Quick Heal, WD, Lenovo, Acer, Microtek, Brother, Cise, Adobe, D-Link, Gigabyte, and Zebronics. As authorized associates of HP, Acer, Epson, Brother, Microtek, Uniline, Zebronics, and Exide on GeM, we ensure quality and reliability.
                     </p>
                 </motion.div>

@@ -1,8 +1,5 @@
 import { Container, SimpleGrid, Card, Text, Title, createStyles, ThemeIcon } from '@mantine/core';
 import { IconCpu, IconMapPin, IconUsers } from '@tabler/icons-react';
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
 
 const useStyles = createStyles((theme) => ({
   section: {
@@ -72,10 +69,10 @@ const Features = () => {
                         <feature.icon size={26} stroke={1.5} />
                     </ThemeIcon>
                 </div>
-              <Text className={`${classes.title} ${inter.className}`}>
+              <Text className={classes.title}>
                 {feature.title}
               </Text>
-              <Text className={`${classes.description} ${inter.className}`}>
+              <Text className={classes.description}>
                 {feature.description}
               </Text>
             </div>

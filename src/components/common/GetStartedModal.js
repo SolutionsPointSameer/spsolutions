@@ -1,10 +1,6 @@
 import { Modal, TextInput, Textarea, Button, Stack, Group } from '@mantine/core';
 import { useForm } from '@mantine/form';
-import { Inter } from 'next/font/google';
 
-const inter = Inter({
-    subsets: ['latin'],
-});
 
 const GetStartedModal = ({ opened, onClose }) => {
     const form = useForm({
@@ -54,7 +50,7 @@ const GetStartedModal = ({ opened, onClose }) => {
             title="Get Started with SP Solutions"
             size="lg"
             centered
-            className={inter.className}
+
             styles={(theme) => ({
                 title: {
                     fontSize: 24,
@@ -70,8 +66,8 @@ const GetStartedModal = ({ opened, onClose }) => {
                         placeholder="John Doe"
                         required
                         {...form.getInputProps('name')}
-                        className={inter.className}
                     />
+
                     
                     <TextInput
                         label="Email Address"
@@ -79,24 +75,24 @@ const GetStartedModal = ({ opened, onClose }) => {
                         type="email"
                         required
                         {...form.getInputProps('email')}
-                        className={inter.className}
                     />
+
                     
                     <TextInput
                         label="Phone Number"
                         placeholder="+91 98765 43210"
                         required
                         {...form.getInputProps('phone')}
-                        className={inter.className}
                     />
+
                     
                     <TextInput
                         label="Company Name"
                         placeholder="Your Company"
                         required
                         {...form.getInputProps('company')}
-                        className={inter.className}
                     />
+
                     
                     <Textarea
                         label="Message"
@@ -104,21 +100,21 @@ const GetStartedModal = ({ opened, onClose }) => {
                         required
                         minRows={4}
                         {...form.getInputProps('message')}
-                        className={inter.className}
                     />
+
                     
                     <Group position="right" mt="md">
                         <Button 
                             variant="subtle" 
                             onClick={onClose}
-                            className={inter.className}
+
                         >
                             Cancel
                         </Button>
                         <Button 
                             type="submit" 
                             color="brand"
-                            className={inter.className}
+
                         >
                             Send Inquiry
                         </Button>

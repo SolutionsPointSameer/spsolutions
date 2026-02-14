@@ -1,15 +1,12 @@
+
 import { motion } from 'framer-motion';
 import { Title, Text, Container, Button, Stack, Group, useMantineTheme, Box, Overlay, createStyles } from '@mantine/core';
-import { Inter } from 'next/font/google';
 import Slider from "react-slick";
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import GetStartedModal from '@/components/common/GetStartedModal';
 
-const inter = Inter({
-    subsets: ['latin'],
-});
 
 const useStyles = createStyles((theme) => ({
     heroWrapper: {
@@ -140,7 +137,7 @@ const Hero = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
                         >
-                            <Title className={`${inter.className} ${classes.heroTitle}`}>
+                            <Title className={classes.heroTitle}>
                                 Empowering Your <Text span inherit>Digital Future</Text>
                             </Title>
                         </motion.div>
@@ -150,7 +147,7 @@ const Hero = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                         >
-                            <Text className={`${inter.className} ${classes.heroSubtitle}`}>
+                            <Text className={classes.heroSubtitle}>
                                 Delivering comprehensive IT solutions and hardware systems to government and corporate enterprises across the nation.
                             </Text>
                         </motion.div>
@@ -165,7 +162,7 @@ const Hero = () => {
                                     size="xl" 
                                     radius="xl" 
                                     color="brand"
-                                    className={inter.className}
+
                                     onClick={() => setModalOpened(true)}
                                     sx={{ 
                                         padding: '0 40px', 
@@ -182,7 +179,7 @@ const Hero = () => {
                                     variant="outline" 
                                     size="xl" 
                                     radius="xl" 
-                                    className={inter.className} 
+ 
                                     sx={{ 
                                         color: 'white', 
                                         borderColor: 'rgba(255,255,255,0.5)', 
